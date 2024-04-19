@@ -57,7 +57,7 @@ make_try_fun() ->
                     try Fun()
                 catch
                     throw:Throw -> {exception, {throw, {Throw, []}}};
-                    Class:Error -> {exception, {Class, {Error, erlang:get_stacktrace()}}}
+                    Class:Error -> {exception, {Class, {Error, []}}}
                 end.
             "
     end,
